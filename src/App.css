@@ -11,5 +11,6 @@
 .droppable-col{
   width: 100%;
   height: 50%;
-  background-color: darkgrey;
+  background-color: #fdb2b2;
+  padding: 4px;
 }
