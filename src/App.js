@@ -1,23 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import React, {useState} from "react";
+import {DragDropContext} from "react-beautiful-dnd";
+import _ from "lodash"
+
 
 function App() {
+  const [state, setState] = useState({
+      "todo": {
+          title: "",
+          items: []
+      },
+      "in-progress":{
+          title: "In Progress",
+          items: []
+      },
+      "done":{
+          title: "Done",
+          items: []
+      }
+  });
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <DragDropContext onDragEnd={e => console.log(e)}>
+          <h2>Under Construction</h2>
+      </DragDropContext>
     </div>
   );
 }
